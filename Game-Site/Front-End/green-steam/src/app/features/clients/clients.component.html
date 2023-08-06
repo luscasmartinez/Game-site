@@ -1,0 +1,20 @@
+<po-page-default
+  p-title="Clientes"
+  [p-actions]="actions"
+  [p-breadcrumb]="breadcrumb">
+
+  <div class="po-mb-1">
+    <po-tag [p-value]="textTotalClients"></po-tag>
+  </div>
+
+  <po-table
+    [p-striped]="true"
+    [p-sort]="true"
+    p-container="border"
+    [p-columns]="columns"
+    [p-items]="items"
+    [p-loading]="isLoading"
+    [p-show-more-disabled]="!hasNextPage"
+    (p-show-more)="ngOnInit()">
+  </po-table>
+</po-page-default>
